@@ -1,0 +1,62 @@
+{
+  "name": "brochure-grid",
+  "version": "1.0.0",
+  "description": "basic web app to manage and display products",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register 'src/test/**/*.ts'  --exit",
+    "build": "tsc",
+    "dev": "ts-node-dev -r tsconfig-paths/register index.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "make:migration": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex migrate:make --knexfile=./src/knexfile.ts -x ts",
+    "rollback": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex migrate:rollback --cwd ./ --knexfile ./src/knexfile.ts --all",
+    "reset": "npm run rollback && npm run migrate",
+    "migrate": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex migrate:latest --knexfile=./src/knexfile.ts",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@types/chai": "^4.2.16",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/faker": "^5.5.3",
+    "@types/mocha": "^8.2.2",
+    "@types/morgan": "^1.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.17.0",
+    "faker": "^5.5.3",
+    "husky": "^6.0.0",
+    "mocha": "^8.3.2",
+    "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.890.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.19",
+    "morgan": "^1.10.0",
+    "objection": "^2.2.15",
+    "pg": "^8.6.0",
+    "pug": "^3.0.2",
+    "slugify": "^1.5.0"
+  },
+  "engines": {
+    "node": ">=0.14"
+  }
+}

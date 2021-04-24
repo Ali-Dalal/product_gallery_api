@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "target": "es2019",
+    "outDir": "build",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "lib": [
+      "ES6"
+    ],
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "@controllers/*": ["src/controllers/*"],
+      "@logger/*": ["src/logger/*"],
+      "@logger": ["src/logger"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"],
+      "@config": ["src/config"],
+      "@models/*": ["src/models/*"]
+    }
+  }
+}
