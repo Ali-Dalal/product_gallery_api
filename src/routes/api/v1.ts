@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { getCities, getCityWithProductAndRelatedBrochures } from '@controllers//api/v1/cities';
+import { getCities, getCityWithProductAndRelatedBrochures } from '@controllers/api/v1/cities';
 import { expressCallback } from '@helpers/express';
 
 const apiV1Routes = express.Router();
