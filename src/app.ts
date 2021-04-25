@@ -10,6 +10,12 @@ app.use(cors());
 
 app.use('/api/v1', ApiV1Routes);
 
+app.get('/', (req, res) => {
+    res.json({
+        message: 'product gallery app'
+    });
+});
+
 app.all('*', function (req, res) {
     res.status(404).send('not found');
 });
