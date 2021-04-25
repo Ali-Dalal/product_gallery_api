@@ -7,7 +7,7 @@ export async function up(knex: Knex): Promise<void> {
         table.string('name');
         table.string('slug').index().unique();
         table.text('description');
-        table.boolean('enabled').index();
+        table.boolean('enabled').defaultTo(true).index();
         table.timestamp('created_at');
         table.timestamp('updated_at');
     });

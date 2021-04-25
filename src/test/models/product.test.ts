@@ -7,6 +7,7 @@ describe('Product models test', () => {
         const product = await Product.query().insert({
             name: 'test product',
             description: 'this is a test description for test product',
+            img_url: 'https://picsum.photos/200/300',
             enabled: true
         });
         expect(product.slug).to.be.a('string');
@@ -17,6 +18,7 @@ describe('Product models test', () => {
         const product = await Product.query().insertGraphAndFetch({
             name: faker.commerce.productName(),
             description: 'this is a test description for test product',
+            img_url: 'https://picsum.photos/200/300',
             enabled: true,
             cities: [{
                 name: faker.address.city(),

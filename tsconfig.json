@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
     "preserveConstEnums": true,
     "strictNullChecks": true,
     "sourceMap": true,
@@ -17,13 +18,19 @@
     "rootDir": "./",
     "baseUrl": "./",
     "paths": {
+      "@/*": ["src/*"],
       "@controllers/*": ["src/controllers/*"],
       "@logger/*": ["src/logger/*"],
       "@logger": ["src/logger"],
       "@utils/*": ["src/utils/*"],
       "@config/*": ["src/config/*"],
       "@config": ["src/config"],
-      "@models/*": ["src/models/*"]
+      "@models/*": ["src/models/*"],
+      "@routes/*": ["src/routes/*"],
+      "@schema/*": ["src/schema/*"],
+      "@types/*": ["src/types/*"],
+      "@types": ["src/types"],
+      "@helpers/*": ["src/helpers/*"]
     }
   }
 }

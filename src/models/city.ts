@@ -12,6 +12,7 @@ export default class City extends Model {
     enabled!: boolean;
     created_at!: string;
     updated_at!: string;
+    products!: Product[]
 
     static getTableName(): string {
         return this.tableName;
@@ -19,16 +20,18 @@ export default class City extends Model {
 
     async $beforeInsert(): Promise<void> {
         this.created_at = new Date().toISOString();
-        await this.generateUniqueSlut();
+        await this.generateUniqueSlug();
     }
 
     $beforeUpdate(): void {
         this.updated_at = new Date().toISOString();
     }
 
-    async generateUniqueSlut(): Promise<void> {
+    async generateUniqueSlug(): Promise<void> {
         const { name } = this;
-        const tmpSlug = slugify(name);
+        const tmpSlug = slugify(name, {
+            lower: true
+        });
         const similarSlugs = await Product.query().where('slug', 'like', `${tmpSlug}%`);
         this.slug = similarSlugs.length ? `${tmpSlug}-${similarSlugs.length + 1}` : tmpSlug;
     }

@@ -1,11 +1,10 @@
 import Model from './base';
-import City from './city';
-import Brochure from '@models/brochure';
+import Product from './product';
 import { RelationMapping } from 'objection';
 import slugify from 'slugify';
 
-export default class Product extends Model {
-    static tableName = 'products';
+export default class Brochure extends Model {
+    static tableName = 'brochures';
     id!: number;
     name!: string;
     slug!: string;
@@ -14,8 +13,7 @@ export default class Product extends Model {
     enabled!: boolean;
     created_at!: string;
     updated_at!: string;
-    cities!: City[]
-    brochures!: Brochure[]
+    product!: Product
 
     static getTableName(): string {
         return this.tableName;
@@ -39,26 +37,14 @@ export default class Product extends Model {
         this.slug = similarSlugs.length ? `${tmpSlug}-${similarSlugs.length + 1}` : tmpSlug;
     }
 
-    static relationMappings(): { cities: RelationMapping<City>, brochures: RelationMapping<Brochure> } {
+    static relationMappings(): { product: RelationMapping<Product> } {
         return {
-            cities: {
-                relation: Model.ManyToManyRelation,
-                modelClass: City,
+            product: {
+                relation: Model.BelongsToOneRelation,
+                modelClass: Product,
                 join: {
-                    from: 'products.id',
-                    through: {
-                        from: 'cities_products.product_id',
-                        to: 'cities_products.city_id'
-                    },
-                    to: 'cities.id'
-                }
-            },
-            brochures: {
-                relation: Model.HasManyRelation,
-                modelClass: Brochure,
-                join: {
-                    from: 'products.id',
-                    to: 'brochures.product_id'
+                    from: 'brochures.product_id',
+                    to: 'products.id'
                 }
             }
         };

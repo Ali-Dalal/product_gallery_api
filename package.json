@@ -9,18 +9,20 @@
     "dev": "ts-node-dev -r tsconfig-paths/register index.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
+    "make:seed": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex seed:make --knexfile=./src/knexfile.ts -x ts",
     "make:migration": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex migrate:make --knexfile=./src/knexfile.ts -x ts",
     "rollback": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex migrate:rollback --cwd ./ --knexfile ./src/knexfile.ts --all",
-    "reset": "npm run rollback && npm run migrate",
+    "reset": "npm run rollback && npm run migrate && npm run seed",
     "migrate": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex migrate:latest --knexfile=./src/knexfile.ts",
+    "seed": "node -r ts-node/register -r tsconfig-paths/register node_modules/.bin/knex seed:run --knexfile=./src/knexfile.ts",
     "prepare": "husky install"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/Ali-Dalal/product_gellary"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ali Dalal",
   "license": "ISC",
   "bugs": {
     "url": ""
@@ -33,6 +35,7 @@
     "@types/faker": "^5.5.3",
     "@types/mocha": "^8.2.2",
     "@types/morgan": "^1.9.2",
+    "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
     "chai": "^4.3.4",
@@ -40,6 +43,7 @@
     "faker": "^5.5.3",
     "husky": "^6.0.0",
     "mocha": "^8.3.2",
+    "supertest": "^6.1.3",
     "ts-node-dev": "^1.1.6",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.4"
@@ -49,6 +53,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "joi": "^17.4.0",
     "knex": "^0.21.19",
     "morgan": "^1.10.0",
     "objection": "^2.2.15",

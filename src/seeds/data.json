@@ -1,0 +1,57 @@
+{
+  "cities": [
+    {
+      "name": "Berlin",
+      "description": "Berlin, Germany’s capital, dates to the 13th century. Reminders of the city's turbulent 20th-century history include its Holocaust memorial and the Berlin Wall's graffitied remains. Divided during the Cold War, its 18th-century Brandenburg Gate has become a symbol of reunification. The city's also known for its art scene and modern landmarks like the gold-colored, swoop-roofed Berliner Philharmonie, built in 1963.",
+      "products": [
+        {
+          "name": "BMWi8",
+          "description": "The BMW i8 is a plug-in hybrid sports car developed by BMW. The i8 is part of BMW's electrified fleet and is marketed under the BMW i sub-brand.",
+          "img_url": "https://cdn.motor1.com/images/mgl/o6ymp/s1/bmw-i8.jpg",
+          "brochures": [
+            {
+              "brochure_url": "https://nd-mediagallery2-public-production.s3.amazonaws.com/06cf61c7e169ee05f37fad35113dc03c/the_bmw_i8_brochure_december_2016.pdf",
+              "name": "BORNELECTRIC1",
+              "description": "The world is in motion. We are in motion. And motion always means something exciting: change. BMW i is a far-reaching and ground-breaking\nconcept for sustainable mobility, presenting visionary electric vehicles and networked services, inspiring design and a new understanding of what premium means – strongly defined by sustainability. Not tomorrow,\nbut today. BMW i – proof that sustainability and pure driving pleasure can complement each other perfectly"
+            },
+            {
+              "brochure_url": "https://nd-mediagallery2-public-production.s3.amazonaws.com/06cf61c7e169ee05f37fad35113dc03c/the_bmw_i8_brochure_december_2016.pdf",
+              "name": "BORNELECTRIC2",
+              "description": "The world is in motion. We are in motion. And motion always means something exciting: change. BMW i is a far-reaching and ground-breaking\nconcept for sustainable mobility, presenting visionary electric vehicles and networked services, inspiring design and a new understanding of what premium means – strongly defined by sustainability. Not tomorrow,\nbut today. BMW i – proof that sustainability and pure driving pleasure can complement each other perfectly"
+            },
+            {
+              "brochure_url": "https://nd-mediagallery2-public-production.s3.amazonaws.com/06cf61c7e169ee05f37fad35113dc03c/the_bmw_i8_brochure_december_2016.pdf",
+              "name": "BORNELECTRIC3",
+              "description": "The world is in motion. We are in motion. And motion always means something exciting: change. BMW i is a far-reaching and ground-breaking\nconcept for sustainable mobility, presenting visionary electric vehicles and networked services, inspiring design and a new understanding of what premium means – strongly defined by sustainability. Not tomorrow,\nbut today. BMW i – proof that sustainability and pure driving pleasure can complement each other perfectly"
+            },
+            {
+              "brochure_url": "https://nd-mediagallery2-public-production.s3.amazonaws.com/06cf61c7e169ee05f37fad35113dc03c/the_bmw_i8_brochure_december_2016.pdf",
+              "name": "BORNELECTRIC4",
+              "description": "The world is in motion. We are in motion. And motion always means something exciting: change. BMW i is a far-reaching and ground-breaking\nconcept for sustainable mobility, presenting visionary electric vehicles and networked services, inspiring design and a new understanding of what premium means – strongly defined by sustainability. Not tomorrow,\nbut today. BMW i – proof that sustainability and pure driving pleasure can complement each other perfectly"
+            },
+            {
+              "brochure_url": "https://nd-mediagallery2-public-production.s3.amazonaws.com/06cf61c7e169ee05f37fad35113dc03c/the_bmw_i8_brochure_december_2016.pdf",
+              "name": "BORNELECTRIC5",
+              "description": "The world is in motion. We are in motion. And motion always means something exciting: change. BMW i is a far-reaching and ground-breaking\nconcept for sustainable mobility, presenting visionary electric vehicles and networked services, inspiring design and a new understanding of what premium means – strongly defined by sustainability. Not tomorrow,\nbut today. BMW i – proof that sustainability and pure driving pleasure can complement each other perfectly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kuala lumpur",
+      "description": "Kuala Lumpur is the capital of Malaysia. Its modern skyline is dominated by the 451m-tall Petronas Twin Towers, a pair of glass-and-steel-clad skyscrapers with Islamic motifs. The towers also offer a public skybridge and observation deck. The city is also home to British colonial-era landmarks such as the Kuala Lumpur Railway Station and the Sultan Abdul Samad Building.",
+      "products": []
+    },
+    {
+      "name": "Munich",
+      "description": "Munich, Bavaria’s capital, is home to centuries-old buildings and numerous museums. The city is known for its annual Oktoberfest celebration and its beer halls, including the famed Hofbräuhaus, founded in 1589. In the Altstadt (Old Town), central Marienplatz square contains landmarks such as Neo-Gothic Neues Rathaus (town hall), with a popular glockenspiel show that chimes and reenacts stories from the 16th century.",
+      "products": []
+    },
+    {
+      "name": "Paris",
+      "description": "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.",
+      "products": []
+    }
+  ]
+}
