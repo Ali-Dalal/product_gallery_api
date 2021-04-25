@@ -43,11 +43,12 @@ export default {
         }
     },
     production: {
-        client: {
+        client: config.db.production.client,
+        connection: {
             host: config.db.production.host,
             database: config.db.production.name,
             user: config.db.production.user,
-            password: config.db.production.password
+            password: config.db.production.password,
         },
         pool: {
             min: Number(config.db.production.min_pool) || 0,
