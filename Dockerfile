@@ -2,8 +2,9 @@ FROM node:14.16.1-alpine3.13 AS Builder
 WORKDIR /build
 COPY . .
 RUN ["npm","i","-g","typescript"]
+RUN ["npm","i"]
 RUN ["npm","run","build"]
-RUN ["npm","i", "--only=prod"]
+RUN ["npm", "prune", "--production"]
 
 FROM node:14.16.1-alpine3.13
 WORKDIR /srv/www/web_api
