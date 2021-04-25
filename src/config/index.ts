@@ -25,11 +25,11 @@ const config = {
             max_pool: ENV_VARS.TEST_DP_MAX_POOL || 2
         },
         production: {
-            client: ENV_VARS.STAGING_DB_CLIENT,
-            host: ENV_VARS.STAGING_DB_HOST,
-            name: ENV_VARS.STAGING_DB_NAME,
-            user: ENV_VARS.STAGING_DB_USER,
-            password: ENV_VARS.STAGING_DB_PASSWORD,
+            client: ENV_VARS.PRODUCTION_DB_CLIENT,
+            host: ENV_VARS.PRODUCTION_DB_HOST,
+            name: ENV_VARS.PRODUCTION_DB_NAME,
+            user: ENV_VARS.PRODUCTION_DB_USER,
+            password: ENV_VARS.PRODUCTION_DB_PASSWORD,
             min_pool: ENV_VARS.PRODUCTION_DB_MIN_POOL || 0,
             max_pool: ENV_VARS.PRODUCTION_DB_MAX_POOL || 10
         },
