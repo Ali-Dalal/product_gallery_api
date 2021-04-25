@@ -12,3 +12,7 @@ app.use(morgan('short'));
 app.use(cors());
 
 app.use('/api/v1', ApiV1Routes);
+
+app.all('*', function (req, res) {
+    res.status(404).send('not found');
+});
