@@ -1,5 +1,5 @@
 {
-  "name": "product-gellary",
+  "name": "product-gallery",
   "version": "1.0.0",
   "description": "basic web app to manage and display products",
   "main": "index.js",
